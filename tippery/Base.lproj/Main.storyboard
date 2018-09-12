@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter Here $" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lv-ha-v97">
-                                        <rect key="frame" x="172" y="283" width="195" height="76"/>
+                                        <rect key="frame" x="15" y="283" width="352" height="76"/>
                                         <color key="backgroundColor" red="1" green="0.99636936773440088" blue="0.98133766126685673" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="1" green="0.52668364386971889" blue="0.054180070901803989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -146,6 +146,7 @@
                                     <constraint firstItem="dT3-XX-AXN" firstAttribute="leading" secondItem="PuZ-lk-ie6" secondAttribute="leading" constant="8" id="piL-dd-KFV"/>
                                     <constraint firstItem="MrO-9I-k7T" firstAttribute="leading" secondItem="1v3-Vx-2XB" secondAttribute="leading" id="qSu-Ux-j84"/>
                                     <constraint firstItem="yr0-Ry-xbW" firstAttribute="leading" secondItem="PuZ-lk-ie6" secondAttribute="leading" constant="8" id="rH7-aL-mE3"/>
+                                    <constraint firstItem="1Lv-ha-v97" firstAttribute="leading" secondItem="PuZ-lk-ie6" secondAttribute="leading" constant="15" id="tmG-AH-nb3"/>
                                     <constraint firstItem="Ipl-O0-MHc" firstAttribute="leading" secondItem="1v3-Vx-2XB" secondAttribute="trailing" constant="19" id="vDJ-ek-MTm"/>
                                     <constraint firstItem="3tJ-bf-kqE" firstAttribute="centerX" secondItem="PuZ-lk-ie6" secondAttribute="centerX" id="zP6-TX-Xyb"/>
                                 </constraints>
