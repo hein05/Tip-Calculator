@@ -12,6 +12,7 @@
 		1D4EEF5321343FD700932BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4EEF5121343FD700932BCE /* Main.storyboard */; };
 		1D4EEF5521343FD900932BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D4EEF5421343FD900932BCE /* Assets.xcassets */; };
 		1D4EEF5821343FD900932BCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4EEF5621343FD900932BCE /* LaunchScreen.storyboard */; };
+		1DD7C1AA213AD22500F8275C /* Broadway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD7C1A9213ACFDF00F8275C /* Broadway.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1D4EEF5421343FD900932BCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D4EEF5721343FD900932BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D4EEF5921343FD900932BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DD7C1A9213ACFDF00F8275C /* Broadway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Broadway.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		1D4EEF4121343FD700932BCE = {
 			isa = PBXGroup;
 			children = (
+				1DD7C1A8213ACF0700F8275C /* Fonts */,
 				1D4EEF4C21343FD700932BCE /* tippery */,
 				1D4EEF4B21343FD700932BCE /* Products */,
 			);
@@ -62,6 +65,14 @@
 				1D4EEF5921343FD900932BCE /* Info.plist */,
 			);
 			path = tippery;
+			sourceTree = "<group>";
+		};
+		1DD7C1A8213ACF0700F8275C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1DD7C1A9213ACFDF00F8275C /* Broadway.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4EEF5821343FD900932BCE /* LaunchScreen.storyboard in Resources */,
+				1DD7C1AA213AD22500F8275C /* Broadway.ttf in Resources */,
 				1D4EEF5521343FD900932BCE /* Assets.xcassets in Resources */,
 				1D4EEF5321343FD700932BCE /* Main.storyboard in Resources */,
 			);
