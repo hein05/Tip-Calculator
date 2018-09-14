@@ -105,7 +105,9 @@ class ViewController: UIViewController {
     @objc func enteringForeground () {
         let dfault = UserDefaults.standard
         let timeInterval = dfault.double(forKey: "timeInterval")
-        if timeInterval > 6.00 {
+        
+        //Checking if 10 mins aka 600s has passed
+        if timeInterval > 600.00 {
             billAmt = 0.0
             billLabel.text = ""
             
