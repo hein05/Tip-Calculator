@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuZ-lk-ie6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter Here $" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lv-ha-v97">
                                         <rect key="frame" x="15" y="283" width="352" height="76"/>
@@ -168,7 +168,15 @@
                             <outletCollection property="gestureRecognizers" destination="gOv-TM-Aa8" appends="YES" id="Ig0-hY-7Wy"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="8sE-2m-bXz"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="8sE-2m-bXz">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="QHe-y9-i6T">
+                            <connections>
+                                <segue destination="Lgx-S1-Oag" kind="show" identifier="settings" id="bPL-El-tj7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="billLabel" destination="1Lv-ha-v97" id="zab-23-mKG"/>
                         <outlet property="customSlideLbl" destination="1v3-Vx-2XB" id="v9P-fm-EVy"/>
@@ -186,11 +194,59 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1623.2" y="-282.90854572713647"/>
+            <point key="canvasLocation" x="1191" y="-284"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Lh4-TA-oRN">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="Lgx-S1-Oag" customClass="SettingsViewController" customModule="tippery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1MH-Wa-5Dj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4D-bk-7MX">
+                                <rect key="frame" x="66" y="108" width="226" height="30"/>
+                                <fontDescription key="fontDescription" name="Broadway-Regular" family="Broadway" pointSize="30"/>
+                                <color key="textColor" red="0.057249147048699989" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="0.99878483179999999" blue="0.99213464559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="du2-0l-Kdt">
+                                <rect key="frame" x="16" y="165" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.78240047089999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1Gr-o5-TAn"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29937065969999999" green="0.67149522569999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oMV-ZK-oSM" firstAttribute="bottom" secondItem="du2-0l-Kdt" secondAttribute="bottom" constant="429" id="0iv-lq-wN3"/>
+                            <constraint firstItem="J4D-bk-7MX" firstAttribute="centerX" secondItem="1MH-Wa-5Dj" secondAttribute="centerX" constant="-8.5" id="871-Ju-aXo"/>
+                            <constraint firstItem="du2-0l-Kdt" firstAttribute="top" secondItem="J4D-bk-7MX" secondAttribute="bottom" constant="27" id="8fk-f8-i3A"/>
+                            <constraint firstItem="du2-0l-Kdt" firstAttribute="leading" secondItem="1MH-Wa-5Dj" secondAttribute="leadingMargin" id="Rjf-bQ-Fmt"/>
+                            <constraint firstItem="du2-0l-Kdt" firstAttribute="trailing" secondItem="1MH-Wa-5Dj" secondAttribute="trailingMargin" id="WZe-A7-axz"/>
+                            <constraint firstItem="J4D-bk-7MX" firstAttribute="leading" secondItem="oMV-ZK-oSM" secondAttribute="leading" constant="66" id="aYE-sr-M9H"/>
+                            <constraint firstItem="J4D-bk-7MX" firstAttribute="top" secondItem="oMV-ZK-oSM" secondAttribute="top" constant="44" id="di6-Eb-s7E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oMV-ZK-oSM"/>
+                    </view>
+                    <connections>
+                        <outlet property="defaultSegment" destination="du2-0l-Kdt" id="y0m-m2-VVz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fg-Jd-r8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TEz-qw-hJ8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epw-Ji-3Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RtR-jy-FGi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ENo-Fo-hLz">
@@ -202,9 +258,8 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vbs-YK-eMr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="epw-Ji-3Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889.85507246376824" y="-282.06521739130437"/>
+            <point key="canvasLocation" x="495" y="-283"/>
         </scene>
     </scenes>
 </document>

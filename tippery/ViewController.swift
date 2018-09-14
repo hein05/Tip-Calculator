@@ -6,8 +6,9 @@
 //  Copyright © 2018 Hein Soe. All rights reserved.
 //
 
-//TODO: Add Simple and advance tipping button
 //TODO: Update On Design
+
+
 
 
 import UIKit
@@ -22,7 +23,10 @@ class ViewController: UIViewController {
          return billAmt + tip
       }
    }
-   
+   let tipPercent = [0.1, 0.15, 0.2]
+    
+    let currency = NumberFormatter()
+    
    @IBOutlet weak var billLabel: UITextField!
    @IBOutlet weak var tipAmt: UILabel!
    @IBOutlet weak var totalAmt: UILabel!
@@ -33,7 +37,7 @@ class ViewController: UIViewController {
    
    @IBOutlet weak var customSwitch: UISwitch!
    
-   let tipPercent = [0.1, 0.15, 0.2]
+   
    
    @IBAction func switchChanged(_ sender: Any) {
       if (customSwitch.isOn) {
@@ -54,9 +58,14 @@ class ViewController: UIViewController {
          let gettipPercent = Double(tipSlider.value)
          customSlideLbl.text = String(format: "(%.2f %%)", gettipPercent * 100)
          billAmt = Double(billLabel.text!) ?? 0
+    
          tip = billAmt * gettipPercent
-         tipAmt.text = String(format: "$ %.2f", tip)
-         totalAmt.text = String(format: "$ %.2f", total)
+        
+//         tipAmt.text = String(format: "$ %.2f", tip)
+//         totalAmt.text = String(format: "$ %.2f", total)
+        
+        tipAmt.text = currency.string(from: NSNumber(value: tip))
+        totalAmt.text = currency.string(from: NSNumber(value: total))
       }
    }
    
@@ -69,18 +78,43 @@ class ViewController: UIViewController {
          tip = billAmt * gettipPercent
    //      total = billAmt + tip
          customSlideLbl.text = String(format: "(%.2f %%)", gettipPercent * 100)
-         tipAmt.text = String(format: "$ %.2f", tip)
-         totalAmt.text = String(format: "$ %.2f", total)
+//         tipAmt.text = String(format: "$ %.2f", tip)
+//         totalAmt.text = String(format: "$ %.2f", total)
+        
+            tipAmt.text = currency.string(from: NSNumber(value: tip))
+            totalAmt.text = currency.string(from: NSNumber(value: total))
       }
    }
    
    @IBAction func onTap(_ sender: Any) {
       view.endEditing(true)
    }
+    
    override func viewDidLoad() {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
+        self.billLabel.becomeFirstResponder()
+    
+        currency.usesGroupingSeparator = true
+        currency.numberStyle = .currency
+        currency.locale = Locale.current
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(enteringForeground), name: .UIApplicationWillEnterForeground, object: nil)
    }
+    
+    @objc func enteringForeground () {
+        let dfault = UserDefaults.standard
+        let timeInterval = dfault.double(forKey: "timeInterval")
+        if timeInterval > 6.00 {
+            billAmt = 0.0
+            billLabel.text = ""
+            
+            tip = 0.0
+            tipAmt.text = currency.string(from: NSNumber(value: tip))
+            totalAmt.text = currency.string(from: NSNumber(value: total))
+        }
+//        print("entering Foreground : \(total) \(tip)")
+    }
 
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()

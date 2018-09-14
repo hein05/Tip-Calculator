@@ -12,6 +12,7 @@
 		1D4EEF5321343FD700932BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4EEF5121343FD700932BCE /* Main.storyboard */; };
 		1D4EEF5521343FD900932BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D4EEF5421343FD900932BCE /* Assets.xcassets */; };
 		1D4EEF5821343FD900932BCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D4EEF5621343FD900932BCE /* LaunchScreen.storyboard */; };
+		1D7B4ABC214C1CC300BDD2C5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B4ABB214C1CC300BDD2C5 /* SettingsViewController.swift */; };
 		1DD7C1AA213AD22500F8275C /* Broadway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD7C1A9213ACFDF00F8275C /* Broadway.ttf */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		1D4EEF5421343FD900932BCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D4EEF5721343FD900932BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D4EEF5921343FD900932BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D7B4ABB214C1CC300BDD2C5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1DD7C1A9213ACFDF00F8275C /* Broadway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Broadway.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 			children = (
 				1D4EEF4D21343FD700932BCE /* AppDelegate.swift */,
 				1D4EEF4F21343FD700932BCE /* ViewController.swift */,
+				1D7B4ABB214C1CC300BDD2C5 /* SettingsViewController.swift */,
 				1D4EEF5421343FD900932BCE /* Assets.xcassets */,
 				1D4EEF5121343FD700932BCE /* Main.storyboard */,
 				1D4EEF5621343FD900932BCE /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				1D4EEF5021343FD700932BCE /* ViewController.swift in Sources */,
 				1D4EEF4E21343FD700932BCE /* AppDelegate.swift in Sources */,
+				1D7B4ABC214C1CC300BDD2C5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
