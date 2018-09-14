@@ -1,10 +1,3 @@
-# Tip-Calculator 
-
-#Calculate Tip with preset percentages 10% , 15% and 20%
-or Calculate Tip with custom percentages ranges from 10% to 100%
-
-#Used Custom Font - Broadway
-
 
 # Pre-work - Tip Calculator
 *Tip Calculator is a tip calculator application for iOS.
@@ -32,6 +25,7 @@ The following **additional** features are implemented:
 - [x] List anything else that you can get done to improve the app functionality!
 
 1. Created Custom tip calculations using UISliderControl
+2. Added Custom Font - Broadway 
  
 # Video Walkthrough
 Here's a walkthrough of implemented user stories:
