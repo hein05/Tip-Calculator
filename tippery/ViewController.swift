@@ -26,6 +26,7 @@ class ViewController: UIViewController {
    let tipPercent = [0.1, 0.15, 0.2]
     
     let currency = NumberFormatter()
+    let dfault = UserDefaults.standard
     
    @IBOutlet weak var billLabel: UITextField!
    @IBOutlet weak var tipAmt: UILabel!
@@ -99,12 +100,15 @@ class ViewController: UIViewController {
         currency.numberStyle = .currency
         currency.locale = Locale.current
     
+    presetPercent.selectedSegmentIndex = dfault.integer(forKey: "percentage")
+    
     NotificationCenter.default.addObserver(self, selector: #selector(enteringForeground), name: .UIApplicationWillEnterForeground, object: nil)
    }
     
     @objc func enteringForeground () {
-        let dfault = UserDefaults.standard
+        
         let timeInterval = dfault.double(forKey: "timeInterval")
+        
         
         //Checking if 10 mins aka 600s has passed
         if timeInterval > 600.00 {
