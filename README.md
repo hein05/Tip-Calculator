@@ -4,7 +4,7 @@
 
 Submitted by: Hein Soe
 
-Time spent: [20] hours spent in total
+Time spent: [26] hours spent in total
 
 # User Stories
 The following # required functionality is complete:
@@ -26,16 +26,25 @@ The following **additional** features are implemented:
 
 1. Created Custom tip calculations using UISliderControl
 2. Added Custom Font - Broadway 
+3. Write to disk on user selection of percentage in Setting.
+4. When bills Value reach their bounds, text's are auto resized.
  
-# Video Walkthrough
+## Video Walkthrough
+
 Here's a walkthrough of implemented user stories:
 
-Video Walkthrough Video Walkthrough Video Walkthrough
+Video Walkthrough 
+
+![](https://imgur.com/c6uqspd.gif)
+
 GIF created with LiceCap.
 
 Notes
 Some challenges I encountered while building the app:
 
+- While trying to implement passing data between VCs, I tried to implement in a way that after back button is pressed in Nav Bar, Data are passed. Finally, used viewilldisappear method combined with Navigation Segue so that I don't have to add new segue or button. That was a major roadblock in progressing.
+
+- Also took some time to try a few methods of find TimeInterval for 10 mins bill disappearance feature.
 
 License
 Copyright [2018] [@Hein Soe]
