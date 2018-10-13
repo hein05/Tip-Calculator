@@ -57,7 +57,7 @@ class ViewController: UIViewController {
       if (customSwitch.isOn) {
          let gettipPercent = Double(tipSlider.value)
          customSlideLbl.text = String(format: "(%.2f %%)", gettipPercent * 100)
-        billAmt = (Double(billLabel.text!)!/100) ?? 0.00
+        billAmt = ((Double(billLabel.text!) ?? 0.00)/100)
         self.billEntered()
          tip = billAmt * gettipPercent
 //         tipAmt.text = String(format: "$ %.2f", tip)
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
    @IBAction func calTip(_ sender: Any) {
       if (!customSwitch.isOn) {
          let gettipPercent = tipPercent[presetPercent.selectedSegmentIndex]
-        billAmt = (Double(billLabel.text!)!/100)
+        billAmt = ((Double(billLabel.text!) ?? 0.00)/100)
 
 //        print(currency.locale.identifier)
         self.billEntered()

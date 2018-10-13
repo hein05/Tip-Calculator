@@ -36,7 +36,7 @@ Here's a walkthrough of implemented user stories:
 
 Video Walkthrough 
 
-![](https://imgur.com/c6uqspd.gif)
+![](https://imgur.com/4Uj2SUb.gif)
 
 GIF created with LiceCap.
 
