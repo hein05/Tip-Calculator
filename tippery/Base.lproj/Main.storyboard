@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RtR-jy-FGi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RtR-jy-FGi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -108,7 +107,7 @@
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Tips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr0-Ry-xbW">
-                                        <rect key="frame" x="8" y="31" width="145" height="37"/>
+                                        <rect key="frame" x="8" y="30.5" width="145" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="XOH-12-gpV"/>
                                         </constraints>
@@ -118,6 +117,12 @@
                                         <color key="shadowColor" red="0.15823619370250641" green="0.1852734695263476" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="0.0" height="2"/>
                                     </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TcP-cg-C6E">
+                                        <rect key="frame" x="15" y="304" width="352" height="35"/>
+                                        <fontDescription key="fontDescription" name="Broadway-Regular" family="Broadway" pointSize="35"/>
+                                        <color key="textColor" red="0.27140309219999997" green="0.43878530440000002" blue="0.58667116119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.69214482225294183" green="1" blue="0.026324883653978226" alpha="0.66489190924657537" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -125,6 +130,7 @@
                                     <constraint firstItem="3tJ-bf-kqE" firstAttribute="top" secondItem="dT3-XX-AXN" secondAttribute="bottom" constant="24" id="79z-CL-ErR"/>
                                     <constraint firstItem="3tJ-bf-kqE" firstAttribute="leading" secondItem="PuZ-lk-ie6" secondAttribute="leading" constant="15" id="7IW-KR-zYS"/>
                                     <constraint firstItem="gRr-B0-N2B" firstAttribute="leading" secondItem="PuZ-lk-ie6" secondAttribute="leading" constant="8" id="CO9-0V-QSa"/>
+                                    <constraint firstItem="TcP-cg-C6E" firstAttribute="trailing" secondItem="1Lv-ha-v97" secondAttribute="trailing" id="EB9-zS-eXo"/>
                                     <constraint firstItem="MrO-9I-k7T" firstAttribute="top" secondItem="PuZ-lk-ie6" secondAttribute="top" constant="26" id="FFw-MI-nQ0"/>
                                     <constraint firstItem="MrO-9I-k7T" firstAttribute="trailing" secondItem="Ipl-O0-MHc" secondAttribute="trailing" id="FRX-n8-Tcn"/>
                                     <constraint firstItem="MrO-9I-k7T" firstAttribute="trailing" secondItem="PuZ-lk-ie6" secondAttribute="trailingMargin" id="Gcp-XX-Of1"/>
@@ -139,6 +145,7 @@
                                     <constraint firstItem="Msi-lB-9e6" firstAttribute="leading" secondItem="1v3-Vx-2XB" secondAttribute="leading" id="WVJ-6o-sPH"/>
                                     <constraint firstItem="dT3-XX-AXN" firstAttribute="leading" secondItem="pCx-TH-yDG" secondAttribute="leading" id="Zkh-Ih-hcG"/>
                                     <constraint firstItem="Msi-lB-9e6" firstAttribute="trailing" secondItem="Ipl-O0-MHc" secondAttribute="trailing" id="hzr-gc-4XT"/>
+                                    <constraint firstItem="TcP-cg-C6E" firstAttribute="centerY" secondItem="1Lv-ha-v97" secondAttribute="centerY" id="iDH-1D-ECV"/>
                                     <constraint firstItem="Msi-lB-9e6" firstAttribute="leading" secondItem="gRr-B0-N2B" secondAttribute="trailing" constant="23" id="iaX-Lw-F2C"/>
                                     <constraint firstItem="Ipl-O0-MHc" firstAttribute="top" secondItem="Msi-lB-9e6" secondAttribute="bottom" constant="37" id="kif-li-qwn"/>
                                     <constraint firstItem="1Lv-ha-v97" firstAttribute="trailing" secondItem="Ipl-O0-MHc" secondAttribute="trailing" id="nVe-Kb-iJ3"/>
@@ -148,7 +155,9 @@
                                     <constraint firstItem="yr0-Ry-xbW" firstAttribute="leading" secondItem="PuZ-lk-ie6" secondAttribute="leading" constant="8" id="rH7-aL-mE3"/>
                                     <constraint firstItem="1Lv-ha-v97" firstAttribute="leading" secondItem="PuZ-lk-ie6" secondAttribute="leading" constant="15" id="tmG-AH-nb3"/>
                                     <constraint firstItem="Ipl-O0-MHc" firstAttribute="leading" secondItem="1v3-Vx-2XB" secondAttribute="trailing" constant="19" id="vDJ-ek-MTm"/>
+                                    <constraint firstItem="TcP-cg-C6E" firstAttribute="leading" secondItem="1v3-Vx-2XB" secondAttribute="leading" constant="-206" id="zEV-0a-daJ"/>
                                     <constraint firstItem="3tJ-bf-kqE" firstAttribute="centerX" secondItem="PuZ-lk-ie6" secondAttribute="centerX" id="zP6-TX-Xyb"/>
+                                    <constraint firstItem="TcP-cg-C6E" firstAttribute="top" secondItem="pCx-TH-yDG" secondAttribute="bottom" constant="29" id="zdT-d0-znm"/>
                                 </constraints>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <color key="backgroundColor" red="0.62166561637918805" green="1" blue="0.39886559356033735" alpha="0.67714576198630139" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,6 +190,7 @@
                         <outlet property="billLabel" destination="1Lv-ha-v97" id="zab-23-mKG"/>
                         <outlet property="customSlideLbl" destination="1v3-Vx-2XB" id="v9P-fm-EVy"/>
                         <outlet property="customSwitch" destination="Ipl-O0-MHc" id="nE6-pu-dol"/>
+                        <outlet property="enteredBill" destination="TcP-cg-C6E" id="Qou-sI-SVU"/>
                         <outlet property="presetPercent" destination="3tJ-bf-kqE" id="4iH-UT-c6X"/>
                         <outlet property="tipAmt" destination="MrO-9I-k7T" id="W5U-fL-Gr7"/>
                         <outlet property="tipSlider" destination="pCx-TH-yDG" id="mvB-4N-Hh2"/>
@@ -194,7 +204,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1191" y="-284"/>
+            <point key="canvasLocation" x="1189.5999999999999" y="-284.70764617691157"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Lh4-TA-oRN">
@@ -246,7 +256,6 @@
         <!--Navigation Controller-->
         <scene sceneID="TEz-qw-hJ8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="epw-Ji-3Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RtR-jy-FGi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ENo-Fo-hLz">
@@ -258,6 +267,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vbs-YK-eMr"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epw-Ji-3Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="495" y="-283"/>
         </scene>

@@ -29,7 +29,8 @@ class ViewController: UIViewController {
     let dfault = UserDefaults.standard
     
    @IBOutlet weak var billLabel: UITextField!
-   @IBOutlet weak var tipAmt: UILabel!
+    @IBOutlet weak var enteredBill: UILabel!
+    @IBOutlet weak var tipAmt: UILabel!
    @IBOutlet weak var totalAmt: UILabel!
    @IBOutlet weak var presetPercent: UISegmentedControl!
    
@@ -37,8 +38,6 @@ class ViewController: UIViewController {
    @IBOutlet weak var customSlideLbl: UILabel!
    
    @IBOutlet weak var customSwitch: UISwitch!
-   
-   
    
    @IBAction func switchChanged(_ sender: Any) {
       if (customSwitch.isOn) {
@@ -58,13 +57,12 @@ class ViewController: UIViewController {
       if (customSwitch.isOn) {
          let gettipPercent = Double(tipSlider.value)
          customSlideLbl.text = String(format: "(%.2f %%)", gettipPercent * 100)
-         billAmt = Double(billLabel.text!) ?? 0
-    
+        billAmt = (Double(billLabel.text!)!/100) ?? 0.00
+        self.billEntered()
          tip = billAmt * gettipPercent
-        
 //         tipAmt.text = String(format: "$ %.2f", tip)
 //         totalAmt.text = String(format: "$ %.2f", total)
-        
+        enteredBill.text = currency.string(from: NSNumber(value: billAmt))
         tipAmt.text = currency.string(from: NSNumber(value: tip))
         totalAmt.text = currency.string(from: NSNumber(value: total))
       }
@@ -73,20 +71,31 @@ class ViewController: UIViewController {
    @IBAction func calTip(_ sender: Any) {
       if (!customSwitch.isOn) {
          let gettipPercent = tipPercent[presetPercent.selectedSegmentIndex]
-         
-         billAmt = Double(billLabel.text!) ?? 0
-         
-         tip = billAmt * gettipPercent
-   //      total = billAmt + tip
+        billAmt = (Double(billLabel.text!)!/100)
+
+//        print(currency.locale.identifier)
+        self.billEntered()
+        
+        tip = billAmt * gettipPercent
          customSlideLbl.text = String(format: "(%.2f %%)", gettipPercent * 100)
 //         tipAmt.text = String(format: "$ %.2f", tip)
 //         totalAmt.text = String(format: "$ %.2f", total)
-        
+            enteredBill.text = currency.string(from: NSNumber(value: billAmt))
             tipAmt.text = currency.string(from: NSNumber(value: tip))
             totalAmt.text = currency.string(from: NSNumber(value: total))
       }
    }
    
+    private func billEntered () {
+        if (billLabel.text?.count)! > 0 {
+            billLabel.isHidden = true
+            enteredBill.isHidden = false
+        } else {
+            billLabel.isHidden = false
+            enteredBill.isHidden = true
+        }
+    }
+    
    @IBAction func onTap(_ sender: Any) {
       view.endEditing(true)
    }
@@ -99,6 +108,15 @@ class ViewController: UIViewController {
         currency.usesGroupingSeparator = true
         currency.numberStyle = .currency
         currency.locale = Locale.current
+    
+    if let symbol = currency.locale.currencySymbol {
+         billLabel.placeholder = "ENTER HERE \(symbol)"
+    }
+    
+   
+    enteredBill.text = currency.string(from: NSNumber(value: billAmt))
+    tipAmt.text = currency.string(from: NSNumber(value: tip))
+    totalAmt.text = currency.string(from: NSNumber(value: total))
     
     presetPercent.selectedSegmentIndex = dfault.integer(forKey: "percentage")
     

@@ -25,9 +25,10 @@ The following **additional** features are implemented:
 - [x] List anything else that you can get done to improve the app functionality!
 
 1. Created Custom tip calculations using UISliderControl
-2. Added Custom Font - Broadway 
+2. Added Custom Font (Third Party) - Broadway 
 3. Write to disk on user selection of percentage in Setting.
 4. When bills Value reach their bounds, text's are auto resized.
+5. Added Icon and Launchscreen
  
 ## Video Walkthrough
 
